@@ -1,0 +1,20 @@
+server:
+  port: 11001
+spring:
+  application:
+    name: USER-SERVER
+  datasource:
+    url: jdbc:mysql://182.254.147.72:3306/file
+    username: root
+    password: zc19961102
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 5
+    maxWait: 60000
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://182.254.147.72:8260/eureka
