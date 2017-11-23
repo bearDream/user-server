@@ -4,21 +4,14 @@ import cn.beardream.core_common.annotate.LoginCheck;
 import cn.beardream.core_common.enums.ReturnCodeEnum;
 import cn.beardream.core_common.model.vo.LoginVo;
 import cn.beardream.userserver.exception.ParamException;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
-import javax.servlet.http.HttpServletRequest;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
-import java.util.Optional;
 
 /**
  * 2017/10/31

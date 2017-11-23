@@ -22,4 +22,6 @@ public interface IUserServiceFace {
     ResponseBody add(User user);
 
     ResponseBody alter(User user);
+
+    ResponseBody loadUserById(Integer userId);
 }

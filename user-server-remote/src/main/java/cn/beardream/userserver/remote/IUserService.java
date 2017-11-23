@@ -4,6 +4,8 @@ import cn.beardream.core_common.model.ResponseBody;
 import cn.beardream.core_common.model.User;
 import cn.beardream.core_common.model.vo.LoginVo;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * 2017/10/24
  *
@@ -37,4 +39,10 @@ public interface IUserService {
      */
     ResponseBody alter(User user);
 
+    /**
+     * 根据userId获取用户信息
+     * @param userId
+     * @return
+     */
+    ResponseBody getUserById(@NotNull(message = "userId不能为空") Integer userId);
 }

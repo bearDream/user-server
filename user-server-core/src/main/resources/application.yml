@@ -12,9 +12,10 @@ spring:
     minIdle: 5
     maxActive: 5
     maxWait: 60000
+# eureka.instance.hostname供其他服务路由时的所在ip地址
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 101.132.69.202
   client:
     service-url:
       defaultZone: http://182.254.147.72:8260/eureka

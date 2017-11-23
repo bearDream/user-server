@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * 2017/10/25
  *
@@ -48,5 +50,11 @@ public class UserService implements IUserService {
     @PutMapping
     public ResponseBody alter(User user) {
         return mIUserServiceFace.alter(user);
+    }
+
+    @Override
+    @PostMapping(value = "/loadById")
+    public ResponseBody getUserById(@NotNull(message = "userId不能为空") Integer userId) {
+        return mIUserServiceFace.loadUserById(userId);
     }
 }
